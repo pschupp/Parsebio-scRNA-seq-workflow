@@ -1,0 +1,118 @@
+# 8. Amplification PCR
+PCR with R2 and [UNK]GGG
+
+5' [UNK] GGG[cDNA']A(30)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+   [UNK']CCC[cDNA] T(30)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2] 5'
+
+OR 
+
+5' [UNK] GGG[cDNA'][BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+   [UNK']CCC[cDNA] [BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2] 5'
+
+# Amplicon sequencing - need to be certain on strandedness
+## first round PCR
+5' [UNK] GGG[cDNA']A(30)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+                                                               <----[R2]
+5'      [R1][ampl'] ---->
+   [UNK']CCC[cDNA] T(?)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2] 5'
+
+## first round result
+5' [UNK] GGG[cDNA'][BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+   [UNK']CCC[cDNA] [BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+AND
+ 
+5'      [R1][ampl']A(?)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+   [UNK']CCC[ampl] T(?)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+## second round PCR
+A)
+5' [UNK] GGG[cDNA'][BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+                                                          <----[R2]
+B)
+5'     [R1][ampl'] ---->
+  [UNK']CCC[cDNA] [BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+AND
+C) 
+5'     [R1][ampl']A(?)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+                                                             <----[R2]
+D)
+5'     [R1][ampl'] ---->
+  [UNK']CCC[ampl] T(?)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+## second round result
+A)
+[UNK] GGG[cDNA'][BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+[UNK']CCC[cDNA] [BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+AND
+B)
+     [R1][ampl']A(?)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+[UNK']CCC[ampl] T(?)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+AND 
+C)
+     [R1] [ampl']A(?)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+     [R1'][ampl] T(?)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+AND
+D)
+     [R1][ampl']A(?)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+[UNK']CCC[ampl] T(?)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+1/4
+## third round result
+A)
+5' [UNK] GGG[cDNA'][BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+                                                          <----[R2]
+B)
+5'      [R1][ampl'] ---->
+   [UNK']CCC[cDNA] [BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+C)
+5'     [R1][ampl']A(?)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+                                                             <----[R2]
+D)
+5'     [R1][ampl'] ---->
+  [UNK']CCC[ampl] T(?)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+E)
+5'      [R1] [ampl']A(?)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+                                                               <----[R2]
+F)
+5'     [R1][ampl'] ---->
+      [R1'][ampl] T(?)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+G)
+5'     [R1][ampl']A(?)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+                                                             <----[R2]
+H)
+5'     [R1][ampl'] ---->
+  [UNK']CCC[ampl] T(?)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+A, full cDNA, size exclusion: A
+B/D,amplicon only,one strand untagged: B, D, H
+C, amplicon only, both strands tagged: C, E, F, G
+4/8
+
+# second PCR reaction
+5'     [R1] [ampl']A(?)[BC1'][linkerA'][BC2'][linkerB'][BC3'][UMI'][R2']
+                                                              <----[R2][i7?][P7]
+   [P5][R1]---->
+3'     [R1'][ampl] T(?)[BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2]
+
+Sequences:
+[P5]      = AATGATACGGCGACCACCGAGATCTACAC
+[R1]      = TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG # Nextera, used in paper
+[R1]      = ACACTCTTTCCCTACACGACGCTCTTCCGATCT # TruSeq, a mix of TruSeq and Nextera is used in sequencing
+[BC1]     = [8bp BC]
+[linkerA] = ATCCACGTGCTTGAGACTGTGG
+[BC2]     = [8bp BC]
+[linkerB] = GTGGCCGATGTTTCGCATCGGCGTACGACT
+[BC3]     = [8bp BC]
+[UMI]     = [10 bp UMI, NNNNNNNNNN]
+[R2]  = GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG # Nextera, end of nextera primers are the same, can do PCR with single primer
+[R2]  = GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT # TruSeq, a mix of TruSeq and Nextera is used in sequencing
+[i7]      = [6bp i7 barcode]
+[P7]      = CAAGCAGAAGACGGCATACGAGAT
