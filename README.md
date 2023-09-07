@@ -21,9 +21,9 @@
 ## Terminology
 Stubby adapter - adapters used in ligation during TruSeq that only include partial **read 1** and **read 2** sequences and not any **i5**/**i7** sequences nor the **P5** or **P7** cluster generation sequences.
 
-    - see the folder `documentation/adapterama` for the papers that introduce this idea
-    - TODO: why is there a spacer between the **read 1**/**read 2** sequence...perhaps it was found to yield in better lack of associatin of stubby-yoke adapter
-    - *n.b.* in our case ethere there is only ligation on one side, it is unneccsarry to have y-yoke as we cannot generate the top strand twice as one end (with **R2**, ligation with the same adapter on each end) is already fixed. This also means that our library prep is **stranded**.
+- see the folder `documentation/adapterama` for the papers that introduce this idea
+- TODO: why is there a spacer between the **read 1**/**read 2** sequence...perhaps it was found to yield in better lack of associatin of stubby-yoke adapter
+- *n.b.* in our case ethere there is only ligation on one side, it is unneccsarry to have y-yoke as we cannot generate the top strand twice as one end (with **R2**, ligation with the same adapter on each end) is already fixed. This also means that our library prep is **stranded**.
 
 ## Watchmaker notes
 
