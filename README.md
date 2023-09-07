@@ -42,7 +42,7 @@ Stubby adapter - adapters used in ligation during TruSeq that only include parti
 - during index PCR temperature can range from 55 to 70C. TODO: compare the length of sequence we ordered with Adapterama I paper!
 - extension time of 30s for up to 500bp, 45s for fragments larger than 500bp
 
-## Decision made during wet lab procedure
+## Decisions made during wet lab procedure
 - TODO: what was the DNA input
 - TODO: get incubation time & length
 - TODO: what adapter concentration was used (dependent on DNA input), with stubby adapter should use more.
