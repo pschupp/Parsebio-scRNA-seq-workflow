@@ -16,11 +16,13 @@
 | 13    | index pcr                                                          | watchmaker | *in vitro*           |
 | 14    | sequencing                                                         | illumina   | *in sequenenco*      |
 
+- *n.b.* with  Watchmaker kit, steps 9-11 occur in one reaction
+
 ## Terminology
 Stubby adapter - adapters used in ligation during TruSeq that only include partial **read 1** and **read 2** sequences and not any **i5**/**i7** sequences nor the **P5** or **P7** cluster generation sequences.
     - see the folder `documentation/adapterama` for the papers that introduce this idea
     - TODO: why is there a spacer between the **read 1**/**read 2** sequence...perhaps it was found to yield in better lack of associatin of stubby-yoke adapter
-    - n.b. in our case ethere there is only ligation on one side, it is unneccsarry to have y-yoke as we cannot generate the top strand twice as one end (with **R2**, ligation with the same adapter on each end) is already fixed. This also means that our library prep is **stranded**.
+    - *n.b.* in our case ethere there is only ligation on one side, it is unneccsarry to have y-yoke as we cannot generate the top strand twice as one end (with **R2**, ligation with the same adapter on each end) is already fixed. This also means that our library prep is **stranded**.
 
 ## Watchmaker notes
 
@@ -38,3 +40,11 @@ Stubby adapter - adapters used in ligation during TruSeq that only include parti
 - during index pcr temperature can range from 55 to 70C. TODO: compare the length of sequence we ordered with Adapterama I paper!
 - extension time of 30s for up to 500bp, 45s for fragments larger than 500bp
 
+## Decision made during wet lab procedure
+- TODO: what was the DNA input
+- TODO: get incubation time & length
+- TODO: what adapter concentration was used (dependent on DNA input), with stuby adapter should use more.
+- TODO: what is the distribution of fragment lengths from Watchmaker output
+- TODO: how many pcr cycles were done during the PCR?
+- TODO: Was the Watchmaker Equinox PCR MM used? If not, which MM?
+    - Don't really need Equinox kit as we are no performing PCR in the presence of beads?
