@@ -9,7 +9,7 @@
 | 5 & 6 | cell lysis and biotin pulldown with streptavidin beads             | parse      | *in vitro*           |
 | 7     | template switch pcr                                                | parse      | *in vitro*           |
 | 8     | amplification pcr                                                  | parse      | *in vitro*           |
-| 9     | enzymatric fragmentation                                           | watchmaker | *in vitro*           |
+| 9     | enzymatic fragmentation                                            | watchmaker | *in vitro*           |
 | 10    | end repair                                                         | watchmaker | *in vitro*           |
 | 11    | A-tailing                                                          | watchmaker | *in vitro*           |
 | 12    | ligation of illumina adapters                                      | watchmaker | *in vitro*           |

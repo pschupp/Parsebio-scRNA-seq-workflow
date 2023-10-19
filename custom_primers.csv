@@ -1,0 +1,6 @@
+Item Name                        , Product             , Purification       , Sequence                                                               , Price 
+Truseq Parse Adapter *T          , 100 nmole DNA Oligo , Standard Desalting , GCT CTT CCG ATC* T                                                     , $9.37
+Truseq Parse Adapter Phos        , 100 nmole DNA Oligo , HPLC               , /5Phos/GA TCG GAA GAG CGT CGT GTA GGG AAA GAG TGT                      , $76.55
+p5 R1 primer                     , 100 nmole DNA Oligo , Standard Desalting , AAT GAT ACG GCG ACC ACC GAG ATC TAC ACT CTT TCC CTA CAC GAC GCT C      , $19.11
+P7 I7 (sub1: CAGATCCA) R1 primer , 25 nmole DNA Oligo  , Standard Desalting , CAA GCA GAA GAC GGC ATA CGA GAT CAG ATC CAG TGA CTG GAG TTC AGA CGT GT , $10.07
+P7 I7 (sub2: ACTTGAGT) R1 primer , 25 nmole DNA Oligo  , Standard Desalting , CAA GCA GAA GAC GGC ATA CGA GAT ACT TGA GTG TGA CTG GAG TTC AGA CGT GT , $10.07
