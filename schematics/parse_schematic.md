@@ -32,7 +32,6 @@ CCC[cDNA]T(30)[BC1][linkerA][BC2][linkerB][BC3][UMI][R2][BIOTIN]
 # 5. Cell lysis
 
 # 6. Biotin pulldown with streptavidin beads
-
 # 7. Template switch PCR (in SmartSeq, go here directly after 2)
 Template switch with NNNGGG 
 
@@ -125,16 +124,25 @@ Primers: [P5][R1']
 3' [P5'][R1'] A[cDNA] [BC1] [linkerA] [BC2] [linkerB] [BC3] [UMI] [R2] [i7] [P7] 5'
                                                           <----[R2']
 Sequences:
-[P5]      = AATGATACGGCGACCACCGAGATCTACAC
-[R1]      = TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG # Nextera, used in paper
-[R1]      = ACACTCTTTCCCTACACGACGCTCTTCCGATCT # TruSeq, a mix of TruSeq and Nextera is used in sequencing
-[BC1]     = [8bp BC]
-[linkerA] = ATCCACGTGCTTGAGACTGTGG
-[BC2]     = [8bp BC]
-[linkerB] = GTGGCCGATGTTTCGCATCGGCGTACGACT
-[BC3]     = [8bp BC]
-[UMI]     = [10 bp UMI, NNNNNNNNNN]
-[R2]  = GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG # Nextera, end of nextera primers are the same, can do PCR with single primer
-[R2]  = GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT # TruSeq, a mix of TruSeq and Nextera is used in sequencing
-[i7]      = [6bp i7 barcode]
-[P7]      = CAAGCAGAAGACGGCATACGAGAT
+[P5] (29)       = AATGATACGGCGACCACCGAGATCTACAC
+[R1] (33)       = TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG # Nextera, used in paper
+[R1] (33)       = ACACTCTTTCCCTACACGACGCTCTTCCGATCT # TruSeq, a mix of TruSeq and Nextera is used in sequencing
+[BC1] (8)       = [8bp BC]
+[linkerA] (22)  = ATCCACGTGCTTGAGACTGTGG
+[BC2] (8)       = [8bp BC]
+[linkerB] (30)  = GTGGCCGATGTTTCGCATCGGCGTACGACT
+[BC3] (8)       = [8bp BC]
+[UMI] (10)      = [10 bp UMI, NNNNNNNNNN]
+[R2] (34)       = GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG # Nextera, end of nextera primers are the same, can do PCR with single primer
+[R2] (34)       = GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT # TruSeq, a mix of TruSeq and Nextera is used in sequencing
+[i7] (6)        = [6bp i7 barcode]
+[P7] (24)       = CAAGCAGAAGACGGCATACGAGAT
+
+# Read 2 breakdown
+
+- 01..10 = UMI
+- 11..18 = BC3
+- 19..48 = LinkerB
+- 49..56 = BC2
+- 57..78 = linkerA
+- 79..86 = BC1

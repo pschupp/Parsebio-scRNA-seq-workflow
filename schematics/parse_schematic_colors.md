@@ -69,6 +69,7 @@ OR
 3'         [cDNA] [BC1] [linkerA ][BC2] [linkerB ][BC3] [UMI] [R2] 5'
 
 # 10. end repair (templated polymerase) 
+TODO: figure out how this is done for suer
 - During the DNA end repair reaction, fragmented DNA is converted into blunt-end DNA containing a 5'-phosphate and 3'-hydroxyl groups. Using 3'-> 5' exonuclease activity
 - The 5'→3' polymerase activity of the Klenow Fragment (DNA Pol I) fills-in 5' protruded DNA ends (lacks 3'5' exo)
 - 3'→5' exonuclease activity of T4 polymerase removes 3'-overhangs. 
